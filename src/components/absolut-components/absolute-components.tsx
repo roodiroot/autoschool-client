@@ -13,7 +13,7 @@ const AbsoluteComponents = () => {
   const { isOpen, onClose } = usePopap();
 
   return (
-    <div>
+    <div className='relative z-30'>
       <ToastContainer
         position='top-right'
         autoClose={5000}

@@ -16,9 +16,13 @@ const Categories: React.FC<{ className: string }> = ({ className }) => {
   return (
     <div
       ref={element.categories}
-      className={cn("w-full max-w-7xl mx-auto px-5", className)}
+      className={cn(
+        "relative w-full max-w-7xl mx-auto px-5",
+        "before:absolute before:-z-0 before:rounded-full before:top-[70%] before:right-[-20%] before:border-[30px]  before:border-mgreen/10 before:w-[400px]  before:h-[400px] md:before:right-[-30%] md:before:w-[512px] md:before:h-[512px]",
+        className
+      )}
     >
-      <Tabs defaultValue='cat_a' className='w-full'>
+      <Tabs defaultValue='cat_a' className='relative z-10 w-full'>
         <TabsList className='grid w-full grid-cols-1 md:grid-cols-2 gap-4 mb-6 sm:mb-14 '>
           <TabsTrigger className='text-2xl' value='cat_a'>
             Категория A

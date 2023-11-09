@@ -13,7 +13,7 @@ const Popup: React.FC<{ onClose: () => void }> = ({ onClose }) => {
       animate={{ opacity: 1, zIndex: 2 }}
       exit={{ opacity: 0, zIndex: 2 }}
       transition={transitionObjectVariants}
-      className='fixed inset-0 bg-shadow/[85%] flex justify-center items-center p-4'
+      className='fixed z-50 inset-0 bg-shadow/[85%] flex justify-center items-center p-4'
     >
       <motion.div
         initial={{

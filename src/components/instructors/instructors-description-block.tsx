@@ -1,6 +1,6 @@
 const InstructorsDescriptionBlock = () => {
   return (
-    <div className='w-full h-full md:max-w-[380px] rounded-3.5xl shadow-m'>
+    <div className='relative z-10 w-full h-full md:max-w-[380px] rounded-3.5xl shadow-m bg-mwhite'>
       <div className='py-6 px-6 sm:py-9 sm:px-12 space-y-4'>
         <p>
           Наши инструкторы в&nbsp;автошколе плюс&nbsp;&mdash; это настоящие

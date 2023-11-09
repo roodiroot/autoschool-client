@@ -21,7 +21,7 @@ const CatBox: React.FC<{
         <CategoryForm />
       </div>
       <div className='flex-1 '>
-        <div className='rounded-3.5xl  shadow-m py-6 px-6 text-slate-950 sm:py-9 sm:px-12'>
+        <div className='rounded-3.5xl bg-mwhite  shadow-m py-6 px-6 text-slate-950 sm:py-9 sm:px-12'>
           <h2 className=' mb-9 max-w-[400px] sm:text-xl'>{title}</h2>
           <ul className='text-sm font-light space-y-9 sm:text-lg sm:space-y-6'>
             {list.map((i: DescriptionCategoryType) => (

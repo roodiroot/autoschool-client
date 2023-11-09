@@ -8,7 +8,7 @@ import Logo from "../header/logo";
 
 const Footer = () => {
   return (
-    <div className='w-full py-10 shadow-m'>
+    <div className='relative z-10 w-full py-10 shadow-m bg-mwhite'>
       <Container>
         <div className='w-full flex flex-col md:flex-row justify-between md:items-center'>
           <NavFooter links={navLinks} />

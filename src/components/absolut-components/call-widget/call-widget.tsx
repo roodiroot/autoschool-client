@@ -13,10 +13,10 @@ const CallWidget = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className='fixed bottom-5 right-5 md:right-20'>
+    <div className='fixed -z-10 bottom-5 right-5 md:right-20'>
       <div
         onClick={() => setOpen(!open)}
-        className='z-20 w-14 h-14 relative flex cursor-pointer'
+        className=' w-14 h-14 relative flex cursor-pointer'
       >
         <span
           className={cn(

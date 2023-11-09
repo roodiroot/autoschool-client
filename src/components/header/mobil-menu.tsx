@@ -17,7 +17,7 @@ const MobilMenu: React.FC<{
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={transitionObjectVariants}
-      className='block md:hidden fixed inset-0 bg-slate-950/80 z-10'
+      className='block md:hidden fixed inset-0 bg-slate-950/80 z-40'
     >
       <motion.div
         initial={{

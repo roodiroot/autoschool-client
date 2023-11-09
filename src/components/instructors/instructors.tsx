@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import NextPrevButton from "@/components/instructors/next-prev-button";
 import useScrollElement from "@/hooks/useScrollElement";
 import usePopap from "@/hooks/usePopap";
+import { cn } from "@/lib/utils";
 
 const Instructors: React.FC<{ className: string }> = ({ className }) => {
   const { onOpen } = usePopap();
@@ -55,7 +56,12 @@ const Instructors: React.FC<{ className: string }> = ({ className }) => {
   return (
     <Container className={className}>
       <TitleElement ref={element.instructors}>Наши инструктора</TitleElement>
-      <div className='w-full flex flex-col md:flex-row lg:gap-5 xl:gap-12 justify-between items-center mb-7 lg:mb-12'>
+      <div
+        className={cn(
+          "relative w-full flex flex-col md:flex-row lg:gap-5 xl:gap-12 justify-between items-center mb-7 lg:mb-12",
+          "before:pointer-events-none before:absolute before:-z-0 before:rounded-full before:top-[-20%] before:left-[-20%] before:border-[30px]  before:border-mgreen/10 before:w-[400px]  before:h-[400px] md:before:left-[-20%] md:before:w-[512px] md:before:h-[512px]"
+        )}
+      >
         <InstructorsDescriptionBlock />
         <InstructorsSlider
           handlers={handlers}
@@ -63,7 +69,7 @@ const Instructors: React.FC<{ className: string }> = ({ className }) => {
           position={position}
         />
       </div>
-      <div className='flex gap-7 items-center'>
+      <div className='relative z-10 flex gap-7 items-center'>
         <Button
           onClick={onOpen}
           variant='mfull'

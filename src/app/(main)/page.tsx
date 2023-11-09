@@ -14,7 +14,12 @@ import Reviews from "@/components/reviews/reviews";
 
 export default function Home() {
   return (
-    <div className='relative w-full h-full overflow-x-hidden'>
+    <div
+      className='
+    relative w-full h-full overflow-x-hidden 
+    before:pointer-events-none before:absolute before:-z-0 before:rounded-full before:bottom-[0%] before:right-[-20%]  before:bg-mgreen/10 before:w-[400px]  before:h-[400px] md:before:right-[0%] md:before:w-[512px] md:before:h-[512px]
+    '
+    >
       <Header />
       <MainScreen />
       <Advantages className='mb-16 sm:mb-32' />

@@ -39,7 +39,7 @@ export const advantagesList: AdvantagesType[] = [
   },
   {
     id: 6,
-    description: "Помогаем сдать экзамены",
+    description: "Поможем на всех этапах",
     icon: "lamp",
   },
 ];
@@ -94,13 +94,13 @@ export const category_descA: DescriptionCategoryType[] = [
   {
     id: 4,
     title: "Количество часов теоретических курсов",
-    description: "175 часов",
+    description: "108 часов",
   },
-  { id: 5, title: "Стоимость теории", description: "8 000 руб." },
+  { id: 5, title: "Стоимость теории", description: "10 000 руб." },
   {
     id: 6,
     title: "Стоимость вождения (1 час)",
-    description: "400 руб.",
+    description: "500 руб.",
   },
 ];
 export const category_descB: DescriptionCategoryType[] = [
@@ -118,13 +118,13 @@ export const category_descB: DescriptionCategoryType[] = [
   {
     id: 4,
     title: "Количество часов теоретических курсов",
-    description: "175 часов",
+    description: "130 часов",
   },
-  { id: 5, title: "Стоимость теории", description: "8 000 руб." },
+  { id: 5, title: "Стоимость теории", description: "10 000 руб." },
   {
     id: 6,
-    title: "Стоимость вождения (2 часа)",
-    description: "800 руб.",
+    title: "Стоимость вождения (1 час)",
+    description: "450 руб.",
   },
 ];
 
@@ -190,7 +190,7 @@ export const questions_list: QuestionType[] = [
   {
     question: "Как просходит зачисление в автошколу?",
     answer:
-      "Для поступления приготовьте необходимые документы общим пакетом. Он включает: оригинал паспорта. 4 цветных или черно-белых фотографии 3х4 (для медсправки, а также свидетельства об окончании школы). Лучше делайте фото на матовой бумаге, чтобы не бликовали. действующий студенческий билет или пенсионное удостоверение (в некоторых школах делают при их предъявлении скидки). Никаких других документов школа требовать не может. Если фотографии и паспорт у вас при себе, приходите в автошколу и заключаете договор.",
+      "Для поступления нужно всего пару шагов. Хватаете паспорт и СНИЛС. Делаете фото 3*4 (желательно на матовой бумаге). И вперед к нам!",
   },
   {
     question: "Можно ли приехать посмотреть как у вас все устроено?",
@@ -238,7 +238,7 @@ export const questions_list: QuestionType[] = [
 export const link_list: SOCIALType[] = [
   { icon: "ws", bg: "#25D366", link: process.env.NEXT_PUBLIC_WS },
   { icon: "tg", bg: "#0088cc", link: process.env.NEXT_PUBLIC_TG },
-  { icon: "vk", bg: "#0077FF", link: process.env.NEXT_PUBLIC_VK },
+  // { icon: "vk", bg: "#0077FF", link: process.env.NEXT_PUBLIC_VK },
 ];
 export const socials: SocialLinkType[] = [
   {
