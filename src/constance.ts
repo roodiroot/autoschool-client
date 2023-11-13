@@ -123,8 +123,8 @@ export const category_descB: DescriptionCategoryType[] = [
   { id: 5, title: "Стоимость теории", description: "10 000 руб." },
   {
     id: 6,
-    title: "Стоимость вождения (1 час)",
-    description: "450 руб.",
+    title: "Стоимость вождения (1 час 30 мин.)",
+    description: "900 руб.",
   },
 ];
 
