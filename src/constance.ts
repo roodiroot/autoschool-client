@@ -236,24 +236,29 @@ export const questions_list: QuestionType[] = [
 
 // СОЦИАЛЬНЫЕ СЕТИ
 export const link_list: SOCIALType[] = [
-  { icon: "ws", bg: "#25D366", link: process.env.NEXT_PUBLIC_WS },
+  // { icon: "ws", bg: "#25D366", link: process.env.NEXT_PUBLIC_WS },
   { icon: "tg", bg: "#0088cc", link: process.env.NEXT_PUBLIC_TG },
-  // { icon: "vk", bg: "#0077FF", link: process.env.NEXT_PUBLIC_VK },
+  { icon: "max", bg: "#6F20EC", link: process.env.NEXT_PUBLIC_MAX },
 ];
 export const socials: SocialLinkType[] = [
-  {
-    name: "vkontakte",
-    link: process.env.NEXT_PUBLIC_VK,
-    element: "vk",
-  },
+  // {
+  //   name: "vkontakte",
+  //   link: process.env.NEXT_PUBLIC_VK,
+  //   element: "vk",
+  // },
   {
     name: "telegram",
     link: process.env.NEXT_PUBLIC_TG,
     element: "tg",
   },
   {
-    name: "whatsapp",
-    link: process.env.NEXT_PUBLIC_WS,
-    element: "ws",
+    name: "max",
+    link: process.env.NEXT_PUBLIC_MAX,
+    element: "max",
   },
+  // {
+  //   name: "whatsapp",
+  //   link: process.env.NEXT_PUBLIC_WS,
+  //   element: "ws",
+  // },
 ];

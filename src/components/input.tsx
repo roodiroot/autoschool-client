@@ -1,14 +1,13 @@
 "use client";
 
 import { FieldError, Path, UseFormRegister } from "react-hook-form";
-import { IFormValues } from "./form";
 import { cn } from "@/lib/utils";
 
 interface InputProps {
   placeholder: string;
   title: string;
-  label: Path<IFormValues>;
-  register: UseFormRegister<IFormValues>;
+  label: Path<any>;
+  register: UseFormRegister<any>;
   required: boolean;
   error?: FieldError | undefined;
   type?: "email" | "tel";
@@ -32,7 +31,7 @@ const Input: React.FC<InputProps> = ({
     pattern = /^((\+7|7|8|9)+([0-9]){10})$/;
   }
   return (
-    <div className='w-full'>
+    <div className="w-full">
       <div
         className={cn(
           "px-5 py-1 text-base sm:text-lg transition",
@@ -50,7 +49,7 @@ const Input: React.FC<InputProps> = ({
         <input
           {...register(label, { required, pattern })}
           placeholder={placeholder}
-          type='text'
+          type="text"
           className={cn(
             "w-full h-full bg-inherit px-5 py-3 rounded-full ",
             error ? "focus:outline-rose-500" : "focus:outline-mgreen"

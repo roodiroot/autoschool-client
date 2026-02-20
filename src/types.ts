@@ -45,7 +45,7 @@ export type MenuLinkType = {
 };
 export type SocialLinkType = {
   name: string;
-  element: "vk" | "ws" | "tg";
+  element: "vk" | "max" | "tg";
   link: string | undefined;
 };
 
@@ -65,7 +65,7 @@ export type QuestionType = {
 };
 
 export type SOCIALType = {
-  icon: "vk" | "ws" | "tg";
+  icon: "vk" | "max" | "tg";
   bg: string;
   link: string | undefined;
 };

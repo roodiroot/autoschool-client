@@ -8,14 +8,16 @@ import Popup from "./popup/popup";
 import { AnimatePresence } from "framer-motion";
 import VideoWidget from "./video-widget/video-widget";
 import CallWidget from "./call-widget/call-widget";
+import CookieBanner from "./cookies/cookie-banner";
 
 const AbsoluteComponents = () => {
   const { isOpen, onClose } = usePopap();
 
   return (
-    <div className='relative z-30'>
+    <div className="relative z-30">
+      <CookieBanner />
       <ToastContainer
-        position='top-right'
+        position="top-right"
         autoClose={5000}
         hideProgressBar={false}
         newestOnTop={false}
@@ -24,7 +26,7 @@ const AbsoluteComponents = () => {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        theme='colored'
+        theme="colored"
       />
       <AnimatePresence>{isOpen && <Popup onClose={onClose} />}</AnimatePresence>
       <VideoWidget />

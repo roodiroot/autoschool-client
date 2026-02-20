@@ -1,7 +1,6 @@
 "use client";
 
 import Icon from "@/components/utils/icon";
-import { cn } from "@/lib/utils";
 import { SOCIALType } from "@/types";
 import { motion } from "framer-motion";
 
@@ -13,6 +12,7 @@ const IconLink: React.FC<{ index: number; link: SOCIALType }> = ({
 
   return (
     <motion.a
+      target="_blank"
       href={link.link}
       style={{ background: link.bg, top: translate }}
       initial={{
@@ -37,11 +37,11 @@ const IconLink: React.FC<{ index: number; link: SOCIALType }> = ({
         stiffness: 260,
         damping: 14,
       }}
-      className='absolute shadow-m2 z-10 left-1/2 inline-flex rounded-full w-10 h-10 cursor-pointer'
+      className="absolute shadow-m2 z-10 left-1/2 inline-flex rounded-full w-10 h-10 cursor-pointer"
     >
       <Icon
         variant={link.icon}
-        className='absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-5 h-5'
+        className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-5 h-5"
       />
     </motion.a>
   );

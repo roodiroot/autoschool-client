@@ -10,13 +10,13 @@ const AccordionQuestions: React.FC<{ questionsList: QuestionType[] }> = ({
   questionsList,
 }) => {
   return (
-    <Accordion type='single' collapsible className='w-full'>
+    <Accordion type="single" collapsible className="w-full">
       {questionsList.map((q, index) => (
         <AccordionItem key={q.question} value={`item-${index}`}>
-          <AccordionTrigger className='relative z-20 text-xs sm:text-sm lg:text-base font-bold bg-mwhite'>
+          <AccordionTrigger className="relative z-10 text-xs sm:text-sm lg:text-base font-bold bg-mwhite">
             {q.question}
           </AccordionTrigger>
-          <AccordionContent className='text-xs sm:text-sm'>
+          <AccordionContent className="text-xs sm:text-sm">
             {q.answer}
           </AccordionContent>
         </AccordionItem>

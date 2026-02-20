@@ -12,22 +12,16 @@ const CategoryForm = () => {
   const [privacy, setPrivacy] = useState<boolean>(true);
   return (
     <>
-      <div className='space-y-4'>
-        <ChekInput id='sale' checked={sale} onClick={() => setSale(!sale)}>
+      <div className="space-y-4">
+        <ChekInput
+          id="sale"
+          checked={sale}
+          onCheckedChange={() => setSale(!sale)}
+        >
           Тест-день! Получить скидку 2000р?
         </ChekInput>
-        <ChekInput
-          id='personal'
-          checked={privacy}
-          onClick={() => setPrivacy(!privacy)}
-        >
-          Согласен с{" "}
-          <Link href='/' className='text-mgreen'>
-            условиями сотрудничества
-          </Link>
-        </ChekInput>
       </div>
-      <Button onClick={onOpen} className='max-w-[300px]' variant='mfull'>
+      <Button onClick={onOpen} className="max-w-[300px]" variant="mfull">
         Подробнее
       </Button>
     </>
