@@ -50,14 +50,14 @@ const MainScreen: React.FC<{ className?: string }> = ({ className }) => {
           <div className='absolute z-10 shadow-m rounded-full bg-mwhite bottom-8 right-8 w-[200px] h-[200px] sm:bottom-8 sm:right-8 sm:w-[300px] sm:h-[300px] md:left-[56px] md:bottom-1/2 md:translate-y-1/2 md:w-[400px] md:h-[400px] lg:translate-y-1/2 lg:w-[600px] lg:h-[600px]'>
             <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[90%] rounded-full bg-slate-100 overflow-hidden'>
               <Image
-                alt='main-photo'
-                loading='lazy'
-                width='980'
-                height='696'
+                alt='Зелёный ретроавтомобиль со знаком «У» на учебной площадке автошколы'
+                priority
+                width={1254}
+                height={1254}
                 decoding='async'
                 data-nimg='1'
-                src='/photo/main5.jpg'
-                className='absolute w-full h-full object-cover -rotate-5'
+                src='/photo/hero-retro-driving.jpg'
+                className='absolute w-full h-full object-cover'
               />
             </div>
           </div>

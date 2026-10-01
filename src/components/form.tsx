@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useForm, SubmitHandler, Controller } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "react-toastify";
 
@@ -10,10 +10,10 @@ import Input from "./input";
 import { Button } from "./ui/button";
 import { useState } from "react";
 import usePopap from "@/hooks/usePopap";
-import sendMessage from "@/data/send-message";
 import z from "zod";
 import { formSchema } from "@/schemas/fedback";
 import { buildTelegramMessage } from "@/lib/build-telegram-message";
+import { sendFeedback } from "@/api/feedback";
 
 const Form = () => {
   const [disabled, setDisabled] = useState<boolean>(false);
@@ -40,9 +40,13 @@ const Form = () => {
 
     try {
       const text = buildTelegramMessage(data);
-      const response = await sendMessage(text);
+      const res = await sendFeedback({
+        to: "borisov130490@gmail.com",
+        subject: "Обратная связь c autoschoolplus.ru",
+        text,
+      });
 
-      if (response.success) {
+      if (res.ok) {
         onClose();
         toast.success("Отлично! Ожидайте звонка.");
         reset();
@@ -82,11 +86,7 @@ const Form = () => {
           control={control}
           name="sale"
           render={({ field }) => (
-            <ChekInput
-              id="sale"
-              checked={!!field.value}
-              onCheckedChange={field.onChange}
-            >
+            <ChekInput id="sale" checked={!!field.value} onCheckedChange={field.onChange}>
               Тест-день! Получить скидку 2000р?
             </ChekInput>
           )}
@@ -122,17 +122,10 @@ const Form = () => {
         ) : null}
       </div>
       <div className="w-full mx-auto text-start mb-6">
-        <p>
-          Ожидайте звонка в течении пяти минут. Благодарим вас за обращение !!!
-        </p>
+        <p>Ожидайте звонка в течении пяти минут. Благодарим вас за обращение !!!</p>
       </div>
       <div className="w-full text-center ">
-        <Button
-          type="submit"
-          variant="mfull"
-          className="w-full max-w-[324px] "
-          disabled={disabled}
-        >
+        <Button type="submit" variant="mfull" className="w-full max-w-[324px] " disabled={disabled}>
           Отправить
         </Button>
       </div>
